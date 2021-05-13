@@ -1,0 +1,45 @@
+From 34a287d311d41e7ee8d75d9fc99cbc61e74a7a22 Mon Sep 17 00:00:00 2001
+From: Kevinsal03 <kevinsal03@users.noreply.github.com>
+Date: Thu, 13 May 2021 12:34:46 -0400
+Subject: [PATCH] Use describe plugin from MMCServer
+
+
+diff --git a/pom.xml b/pom.xml
+index ef254121..c093a0fc 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -84,22 +84,25 @@
+ 
+     <build>
+         <plugins>
++            <!-- MMCFall begin - Replace Bungee version describer -->
+             <plugin>
+-                <groupId>net.md-5</groupId>
+-                <artifactId>scriptus</artifactId>
+-                <version>0.4.1</version>
++                <groupId>com.lukegb.mojo</groupId>
++                <artifactId>gitdescribe-maven-plugin</artifactId>
++                <version>1.3</version>
+                 <configuration>
+-                    <format>git:${project.name}:${project.version}:%s:${build.number}</format>
++                    <outputPrefix>git:${project.name}:${project.version}:</outputPrefix>
++                    <scmDirectory>..</scmDirectory>
+                 </configuration>
+                 <executions>
+                     <execution>
+-                        <phase>initialize</phase>
++                        <phase>compile</phase>
+                         <goals>
+-                            <goal>describe</goal>
++                            <goal>gitdescribe</goal>
+                         </goals>
+                     </execution>
+                 </executions>
+             </plugin>
++            <!-- MMCFall end -->
+             <!-- Use latest version of the javadoc plugin, fixes some issues with the javadoc tool on recent JDK builds on macOS at least -->
+             <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+-- 
+2.17.1
+
