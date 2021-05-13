@@ -1,0 +1,739 @@
+From 3bccbcce88fb13326dded6cc1e6deacc717b9244 Mon Sep 17 00:00:00 2001
+From: Kevinsal03 <kevinsal03@users.noreply.github.com>
+Date: Thu, 13 May 2021 11:53:22 -0400
+Subject: [PATCH] POM changes
+
+
+diff --git a/api/pom.xml b/api/pom.xml
+index ca1ed881..7a47a5cc 100644
+--- a/api/pom.xml
++++ b/api/pom.xml
+@@ -4,42 +4,42 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-parent</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-api</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-api</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-API</name>
++    <name>MMCFall-API</name>
+     <description>API implemented by the Elastic Portal Suite</description>
+ 
+     <dependencies>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-chat</artifactId>
++            <groupId>me.kevsal.minecraft</groupId>
++            <artifactId>mmcfall-chat</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-config</artifactId>
++            <groupId>me.kevsal.minecraft</groupId>
++            <artifactId>mmcfall-config</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-event</artifactId>
++            <groupId>me.kevsal.minecraft</groupId>
++            <artifactId>mmcfall-event</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-protocol</artifactId>
++            <groupId>me.kevsal.minecraft</groupId>
++            <artifactId>mmcfall-protocol</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+diff --git a/bootstrap/pom.xml b/bootstrap/pom.xml
+index 37c0880c..4486b64a 100644
+--- a/bootstrap/pom.xml
++++ b/bootstrap/pom.xml
+@@ -4,19 +4,19 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-parent</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-bootstrap</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-bootstrap</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Bootstrap</name>
+-    <description>Java 1.6 loader for Waterfall</description>
++    <name>MMCFall-Bootstrap</name>
++    <description>Java 1.6 loader for MMCFall</description>
+ 
+     <properties>
+         <maven.deploy.skip>true</maven.deploy.skip>
+@@ -29,15 +29,15 @@
+ 
+     <dependencies>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-proxy</artifactId>
++            <groupId>me.kevsal.minecraft</groupId>
++            <artifactId>mmcfall-proxy</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+     </dependencies>
+ 
+     <build>
+-        <finalName>Waterfall</finalName>
++        <finalName>MMCFall</finalName>
+         <plugins>
+             <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+diff --git a/chat/pom.xml b/chat/pom.xml
+index 85309233..99ff0dae 100644
+--- a/chat/pom.xml
++++ b/chat/pom.xml
+@@ -4,19 +4,19 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-parent</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-chat</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-chat</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Chat</name>
+-    <description>Minecraft JSON chat API intended for use with Waterfall</description>
++    <name>MMCFall-Chat</name>
++    <description>Minecraft JSON chat API intended for use with MMCFall</description>
+ 
+     <dependencies>
+         <dependency>
+diff --git a/config/pom.xml b/config/pom.xml
+index 38db2292..5a6ed4b7 100644
+--- a/config/pom.xml
++++ b/config/pom.xml
+@@ -4,19 +4,19 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-parent</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-config</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-config</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Config</name>
+-    <description>Generic java configuration API intended for use with Waterfall</description>
++    <name>MMCFall-Config</name>
++    <description>Generic java configuration API intended for use with MMCFall</description>
+ 
+     <dependencies>
+         <dependency>
+diff --git a/event/pom.xml b/event/pom.xml
+index 82a411b0..2c35f389 100644
+--- a/event/pom.xml
++++ b/event/pom.xml
+@@ -4,17 +4,17 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-parent</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-event</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-event</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Event</name>
+-    <description>Generic java event dispatching API intended for use with Waterfall.</description>
++    <name>MMCFall-Event</name>
++    <description>Generic java event dispatching API intended for use with MMCFall.</description>
+ </project>
+diff --git a/log/pom.xml b/log/pom.xml
+index 646dbfae..41d567e9 100644
+--- a/log/pom.xml
++++ b/log/pom.xml
+@@ -4,19 +4,19 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-parent</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-log</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-log</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Log</name>
+-    <description>Simplistic and performant java.util.Logger based logger and console API designed for use with Waterfall and Minecraft related applications.</description>
++    <name>MMCFall-Log</name>
++    <description>Simplistic and performant java.util.Logger based logger and console API designed for use with MMCFall and Minecraft related applications.</description>
+ 
+     <dependencies>
+         <dependency>
+@@ -26,8 +26,8 @@
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-chat</artifactId>
++            <groupId>me.kevsal.minecraft</groupId>
++            <artifactId>mmcfall-chat</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+diff --git a/log4j/pom.xml b/log4j/pom.xml
+index 51187fd1..d4ae06fc 100644
+--- a/log4j/pom.xml
++++ b/log4j/pom.xml
+@@ -3,19 +3,19 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-parent</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-log4j</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-log4j</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Log</name>
+-    <description>Simplistic and performant Log4j2 based logger and console API designed for use with Waterfall and Minecraft related applications.</description>
++    <name>MMCFall-Log</name>
++    <description>Simplistic and performant Log4j2 based logger and console API designed for use with MMCFall and Minecraft related applications.</description>
+ 
+     <properties>
+         <log4j2.version>2.14.0</log4j2.version>
+diff --git a/module/cmd-alert/pom.xml b/module/cmd-alert/pom.xml
+index 472314c2..f0a1dd35 100644
+--- a/module/cmd-alert/pom.xml
++++ b/module/cmd-alert/pom.xml
+@@ -4,14 +4,14 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-module</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-module</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-module-cmd-alert</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-module-cmd-alert</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+diff --git a/module/cmd-find/pom.xml b/module/cmd-find/pom.xml
+index de8faee0..60094a7b 100644
+--- a/module/cmd-find/pom.xml
++++ b/module/cmd-find/pom.xml
+@@ -4,14 +4,14 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-module</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-module</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-module-cmd-find</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-module-cmd-find</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+diff --git a/module/cmd-list/pom.xml b/module/cmd-list/pom.xml
+index 0cab9a7a..eb6aed89 100644
+--- a/module/cmd-list/pom.xml
++++ b/module/cmd-list/pom.xml
+@@ -4,14 +4,14 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-module</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-module</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-module-cmd-list</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-module-cmd-list</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+diff --git a/module/cmd-send/pom.xml b/module/cmd-send/pom.xml
+index 240c9548..cfa6830a 100644
+--- a/module/cmd-send/pom.xml
++++ b/module/cmd-send/pom.xml
+@@ -4,14 +4,14 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-module</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-module</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-module-cmd-send</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-module-cmd-send</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+diff --git a/module/cmd-server/pom.xml b/module/cmd-server/pom.xml
+index 4c13d517..69b51b75 100644
+--- a/module/cmd-server/pom.xml
++++ b/module/cmd-server/pom.xml
+@@ -4,14 +4,14 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-module</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-module</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-module-cmd-server</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-module-cmd-server</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+diff --git a/module/pom.xml b/module/pom.xml
+index c9849b6c..828d5b48 100644
+--- a/module/pom.xml
++++ b/module/pom.xml
+@@ -4,19 +4,19 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-parent</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-module</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-module</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>pom</packaging>
+ 
+-    <name>Waterfall Modules</name>
+-    <description>Parent project for all Waterfall modules.</description>
++    <name>MMCFall Modules</name>
++    <description>Parent project for all MMCFall modules.</description>
+ 
+     <modules>
+         <module>cmd-alert</module>
+@@ -28,15 +28,15 @@
+     </modules>
+ 
+     <properties>
+-        <module.author>WaterfallMC</module.author>
++        <module.author>MMCFallMC</module.author>
+         <maven.deploy.skip>true</maven.deploy.skip>
+         <maven.javadoc.skip>true</maven.javadoc.skip>
+     </properties>
+ 
+     <dependencies>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-api</artifactId>
++            <groupId>me.kevsal.minecraft</groupId>
++            <artifactId>mmcfall-api</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+diff --git a/module/reconnect-yaml/pom.xml b/module/reconnect-yaml/pom.xml
+index 45910b0e..eff8cdab 100644
+--- a/module/reconnect-yaml/pom.xml
++++ b/module/reconnect-yaml/pom.xml
+@@ -4,14 +4,14 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-module</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-module</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-module-reconnect-yaml</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-module-reconnect-yaml</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+diff --git a/native/pom.xml b/native/pom.xml
+index db15febb..3a212a20 100644
+--- a/native/pom.xml
++++ b/native/pom.xml
+@@ -4,19 +4,19 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-parent</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-native</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-native</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Native</name>
+-    <description>Optional native code to speed up and enhance Waterfall functionality.</description>
++    <name>MMCFall-Native</name>
++    <description>Optional native code to speed up and enhance MMCFall functionality.</description>
+ 
+     <dependencies>
+         <dependency>
+diff --git a/pom.xml b/pom.xml
+index 56bb4a7a..ef254121 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -4,24 +4,24 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-super</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-super</artifactId>
+         <version>dev-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-parent</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-parent</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>pom</packaging>
+ 
+-    <name>Waterfall-Parent</name>
+-    <description>Parent project for all Waterfall modules.</description>
+-    <url>https://github.com/WaterfallMC/Waterfall</url>
+-    <inceptionYear>2015</inceptionYear>
++    <name>MMCFall-Parent</name>
++    <description>Parent project for all MMCFall modules.</description>
++    <url>https://github.com/Kevinsal03/MMCFall</url>
++    <inceptionYear>2021</inceptionYear>
+     <organization>
+-        <name>WaterfallMC</name>
+-        <url>https://github.com/WaterfallMC</url>
++        <name>Kevinsal03</name>
++        <url>https://github.com/Kevinsal03</url>
+     </organization>
+     <licenses>
+         <license>
+@@ -31,24 +31,6 @@
+         </license>
+     </licenses>
+ 
+-    <developers>
+-        <developer>
+-            <id>Tux</id>
+-        </developer>
+-        <developer>
+-            <id>Techcable</id>
+-        </developer>
+-        <developer>
+-            <id>kashike</id>
+-        </developer>
+-        <developer>
+-            <id>jamierocks</id>
+-        </developer>
+-        <developer>
+-            <id>fuzzybot</id>
+-        </developer>
+-    </developers>
+-
+     <modules>
+         <module>api</module>
+         <module>bootstrap</module>
+@@ -64,27 +46,6 @@
+         <module>native</module>
+     </modules>
+ 
+-    <scm>
+-        <connection>scm:git:git@github.com:com:WaterfallMC/Waterfall.git</connection>
+-        <developerConnection>scm:git:git@github.com:WaterfallMC/Waterfall.git</developerConnection>
+-        <url>git@github.com:WaterfallMC/Waterfall.git</url>
+-    </scm>
+-    <issueManagement>
+-        <system>GitHub</system>
+-        <url>https://github.com/PaperMC/Waterfall/issues</url>
+-    </issueManagement>
+-
+-    <distributionManagement>
+-        <repository>
+-            <id>papermc-releases</id>
+-            <url>https://papermc.io/repo/repository/maven-releases/</url>
+-        </repository>
+-        <snapshotRepository>
+-            <id>papermc-snapshots</id>
+-            <url>https://papermc.io/repo/repository/maven-snapshots/</url>
+-        </snapshotRepository>
+-    </distributionManagement>
+-
+     <properties>
+         <build.number>unknown</build.number>
+         <lombok.version>1.18.20</lombok.version>
+diff --git a/protocol/pom.xml b/protocol/pom.xml
+index 402266ca..c515fa7c 100644
+--- a/protocol/pom.xml
++++ b/protocol/pom.xml
+@@ -4,19 +4,19 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-parent</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-protocol</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-protocol</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Protocol</name>
+-    <description>Minimal implementation of the Minecraft protocol for use in Waterfall</description>
++    <name>MMCFall-Protocol</name>
++    <description>Minimal implementation of the Minecraft protocol for use in MMCFall</description>
+ 
+     <!-- We really shouldn't depend on external repositories, but at least this is the Central staging one -->
+     <repositories>
+@@ -41,8 +41,8 @@
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-chat</artifactId>
++            <groupId>me.kevsal.minecraft</groupId>
++            <artifactId>mmcfall-chat</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+diff --git a/proxy/pom.xml b/proxy/pom.xml
+index ca1fc13b..9464ed83 100644
+--- a/proxy/pom.xml
++++ b/proxy/pom.xml
+@@ -4,18 +4,18 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-parent</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-proxy</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-proxy</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Proxy</name>
++    <name>MMCFall-Proxy</name>
+     <description>Proxy component of the Elastic Portal Suite</description>
+ 
+     <properties>
+@@ -64,32 +64,32 @@
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-api</artifactId>
++            <groupId>me.kevsal.minecraft</groupId>
++            <artifactId>mmcfall-api</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-log4j</artifactId>
++            <groupId>me.kevsal.minecraft</groupId>
++            <artifactId>mmcfall-log4j</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-native</artifactId>
++            <groupId>me.kevsal.minecraft</groupId>
++            <artifactId>mmcfall-native</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-protocol</artifactId>
++            <groupId>me.kevsal.minecraft</groupId>
++            <artifactId>mmcfall-protocol</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-query</artifactId>
++            <groupId>me.kevsal.minecraft</groupId>
++            <artifactId>mmcfall-query</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+diff --git a/query/pom.xml b/query/pom.xml
+index 8ce88f4a..3569da03 100644
+--- a/query/pom.xml
++++ b/query/pom.xml
+@@ -4,19 +4,19 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <parent>
+-        <groupId>io.github.waterfallmc</groupId>
+-        <artifactId>waterfall-parent</artifactId>
++        <groupId>me.kevsal.minecraft</groupId>
++        <artifactId>mmcfall-parent</artifactId>
+         <version>1.16-R0.5-SNAPSHOT</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+-    <artifactId>waterfall-query</artifactId>
++    <groupId>me.kevsal.minecraft</groupId>
++    <artifactId>mmcfall-query</artifactId>
+     <version>1.16-R0.5-SNAPSHOT</version>
+     <packaging>jar</packaging>
+ 
+-    <name>Waterfall-Query</name>
+-    <description>Minecraft query implementation based on the Waterfall API.</description>
++    <name>MMCFall-Query</name>
++    <description>Minecraft query implementation based on the MMCFall API.</description>
+ 
+     <dependencies>
+         <dependency>
+@@ -26,8 +26,8 @@
+             <scope>compile</scope>
+         </dependency>
+         <dependency>
+-            <groupId>io.github.waterfallmc</groupId>
+-            <artifactId>waterfall-api</artifactId>
++            <groupId>me.kevsal.minecraft</groupId>
++            <artifactId>mmcfall-api</artifactId>
+             <version>${project.version}</version>
+             <scope>compile</scope>
+         </dependency>
+-- 
+2.17.1
+
